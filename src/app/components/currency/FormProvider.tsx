@@ -13,7 +13,10 @@ import { ReactNode } from 'react';
 const schema = yup.object({
   fromCurrency: yup.string().required(),
   toCurrency: yup.string().required(),
-  amount: yup.number().required().positive(),
+  amount:   yup.number()
+  .typeError('Amount must be a number')
+  .positive('Amount must be positive')
+  .required('Amount is required'),
 });
 
 type FormValues = yup.InferType<typeof schema>;
