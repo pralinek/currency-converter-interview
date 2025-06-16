@@ -11,7 +11,8 @@ import {
 import { ReactNode } from 'react';
 
 const schema = yup.object({
-  currency: yup.string().required(),
+  fromCurrency: yup.string().required(),
+  toCurrency: yup.string().required(),
   amount: yup.number().required().positive(),
 });
 
@@ -31,6 +32,7 @@ export function FormProvider({
   const methods: UseFormReturn<FormValues> = useForm<FormValues>({
     defaultValues,
     resolver: yupResolver(schema),
+    mode: 'onChange',
   });
 
   return (

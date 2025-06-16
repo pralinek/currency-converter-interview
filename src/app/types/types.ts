@@ -5,3 +5,9 @@ export interface Currency {
     code: string;
     precision: number;
   }
+
+  export type FormValues = {
+    fromCurrency: string;
+    toCurrency: string;
+    amount: number;
+  };
