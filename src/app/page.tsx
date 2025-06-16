@@ -1,9 +1,9 @@
-
+import CurrencySelector from "@/currency/page";
 
 export default function Home() {
   return (
     <div className="">
-      Currency Provider
+      <CurrencySelector></CurrencySelector>
     </div>
   );
 }

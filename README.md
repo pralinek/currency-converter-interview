@@ -2,7 +2,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Currency converter for interview to run project follow
 
-Before running the project please create .env file in roopt folder with the following:
+Before running the project please create .env.local file in roopt folder with the following:
+## API Overview:
+- For this project, you will be required to make use of the following free API resource: [https://currencybeacon.com](https://currencybeacon.com/register)
+- You will need to register for a free account to get access to your `API_KEY`. 
+  - Your `API_KEY` can be found on the main dashboard once you log in under `API Token Information`.
+
+PRIVATE_CURRENCY_API_KEY=YOUR_API_KEY
+NEXT_PUBLIC_ENV=development
+
+
 ## Getting Started
 
 First, run the development server:
