@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Currency converter for interview to run project follow
+
+Before running the project please create .env file in roopt folder with the following:
 ## Getting Started
 
 First, run the development server:
