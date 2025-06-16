@@ -13,7 +13,7 @@ import { ConversionResult } from "./ConversionResult";
 
 
 export function CurrencyExchange() {
-const [result, setResult] = useState({from: 'PLN', to: 'USD', result:0})
+const [result, setResult] = useState({from: 'PLN', to: 'USD', result:0, amount: 1})
 
   const { data: currenciesObject, isLoading, error } = useCurrencies();
 
@@ -46,7 +46,8 @@ const [result, setResult] = useState({from: 'PLN', to: 'USD', result:0})
       setResult({
         from: data.fromCurrency,
         to: data.toCurrency,
-        result: resultData.result
+        result: resultData.result,
+        amount: data.amount
 
       })
       console.log('Converted value:', resultData.result);
@@ -71,7 +72,7 @@ const [result, setResult] = useState({from: 'PLN', to: 'USD', result:0})
       <CurrencySelector name="fromCurrency" currencies={currencies} label="From"/>
       <CurrencySelector name="toCurrency" currencies={currencies} label="To" />
       <Input name="amount" />
-      <ConversionResult from={result.from} to={result.to} result={result.result}></ConversionResult>
+      <ConversionResult from={result.from} to={result.to} result={result.result} amount={result.amount}></ConversionResult>
       <Button type="submit" variant="contained">
         Submit
       </Button>
